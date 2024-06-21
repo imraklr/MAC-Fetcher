@@ -27,7 +27,7 @@ fi
 ip=$1
 
 # Retrieve MAC address using ARP
-mac_address=$(arp -a $ip | awk '{print $4}')
+mac_address=$(arp -a | awk '{print $4}')
 
 if [ -z "$mac_address" ]; then
     echo "Error: MAC address not found for IP $ip"

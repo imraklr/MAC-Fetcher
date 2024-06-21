@@ -22,7 +22,7 @@ public class MacAddressFetcher {
     private static String getMacAddress(String ip) {
         String macAddress = null;
         try {
-            ProcessBuilder builder = new ProcessBuilder("/bin/bash", "-c", "./get_mac_address.sh" + ip);
+            ProcessBuilder builder = new ProcessBuilder("/bin/bash", "-c", "./get_mac_address.sh " + ip);
             builder.redirectErrorStream(true);
             Process process = builder.start();
 
